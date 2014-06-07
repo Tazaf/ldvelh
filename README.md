@@ -23,7 +23,16 @@ Aucune gestion de l'authentification n'existe actuellement, ce qui laisse la pos
 
 ### Installation de la v-1.0
 
-En construction
+Pour installer la v1.0, il vous faut suivre les étapes suivantes :
+* Premièrement, faites une copie de ce projet à l'endroit où vous souhaitez l'installer
+* Allez dans /application/View/, dézippez Smarty.zip dans le dossier où il se trouve
+* Dans votre SGBD, créez une nouvelle base de données.
+* Nommez là comme bon vous semble, mais paramétrez-la en utf8-general-ci
+* Dans cette base de données nouvellement créée, importez dump_structure.sql
+* Importez ensuite dump_data.sql
+* Allez /application/ et ouvrez le fichier bdconnect.php
+* Modifiez les paramètres nécessaires pour que leur valeur correspondent à celles utilisez dans votre base de données précédemment créée.
+* C'est fini !
 
 ## English
 
@@ -48,4 +57,13 @@ There is no authentication whatsoever. This means that every user can create, de
 
 ### How to install v-1.0
 
-Section in construction
+In order to install this v1.0, please follow this steps :
+* First, clone this project where you want to install it
+* Go to /application/View/ and unzip Smarty.zip in this same directory
+* In your favourite DBMS, create a new database
+* Name it as you wish, but don't forget to set it in utf8-general-ci
+* In this newly created database, import dump_structure.sql
+* Then import dump_data.sql
+* Go to /application/ and open the bdconnect.php file
+* Modify the needed parameters in order for them to match the value used in the previously created database
+* That's it !
