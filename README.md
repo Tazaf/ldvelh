@@ -21,6 +21,10 @@ Certaines spécificités des règles n'ont pas pu être prises en compte, soit p
 
 Aucune gestion de l'authentification n'existe actuellement, ce qui laisse la possibilité à tous les visiteurs de créer, supprimer ou jouer avec n'importe quel personnage déjà existant.
 
+### Installation de la v-1.0
+
+En construction
+
 ## English
 
 ### Summary
@@ -41,3 +45,7 @@ Some rules are not supported, either due a to lack of time or a lack of knowledg
 * Items effets : items like weapons or shield can have an effect on the player attributes. The rules in the book being vague about how these effets work, they are not implemented as for now.
 
 There is no authentication whatsoever. This means that every user can create, delete or use any existing character.
+
+### How to install v-1.0
+
+Section in construction
