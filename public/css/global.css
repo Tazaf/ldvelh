@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,600,800);
+
+body {
+    font-size: 1em;
+    background: url(./img/bg.png) repeat top left;
+    font-family: "Exo 2", Arial, sans-serif;
+    font-weight: 500;
+    color: #777;
+    min-width: 450px;
+    cursor: default;
+}
+
+footer {
+    border-top: 2px solid #C74F4F;
+    margin-top: 30px !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.centre {
+    width: 95% !important;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+
+div.centre>h2 {
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+    color: #C74F4F;
+    border-bottom: 2px solid #C74F4F;
+    padding: 0 0 20px 0;
+    margin-bottom: 30px !important;
+    margin-top: 0; 
+}
+
+h3.centre {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 1.3em;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.nom {
+    border-bottom: thin solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 1.25em;
+}
+
+.habilete,
+.habileteMax,
+.endurance,
+.enduranceMax,
+.chance,
+.chanceMax {
+    text-transform: capitalize;
+}
+
+.habilete,
+.habileteMax {
+    color: #5D94C7 !important;
+    font-weight: 600;
+}
+
+.habilete:after,
+.habileteMax:after {
+    content: url(./img/sword_mini.png);
+}
+
+.endurance,
+.enduranceMax {
+    color: #C74F4F !important;
+    font-weight: 600;
+}
+
+.endurance:after,
+.enduranceMax:after {
+    content: url(./img/heart_mini.png);
+}
+.chance,
+.chanceMax {
+    color: #01A391 !important;
+    font-weight: 600;
+}
+
+.chance:after,
+.chanceMax:after {
+    content: url(./img/clover_mini.png);
+}
+.gras {
+    font-weight: 800;
+}
+
+.bad {
+    color: #C74F4F !important;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px lightgrey;
+    z-index: 99999;
+}
+
+.error {
+    box-shadow: 0 0 5px #C74F4F inset !important;
+}
+
+footer>p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #C74F4F;
+    font-size: 0.7em;
+    text-align: right;
+    font-weight: 600;
+}

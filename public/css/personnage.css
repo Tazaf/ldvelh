@@ -1,0 +1,416 @@
+body {
+    padding-top: 300px;
+    margin-bottom: 20px;
+}
+
+#big_title {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 0px 10px #808080;
+}
+
+#big_title>p {
+    text-align: center;
+    font-size: 3em;
+    color: #01A391;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: transparent;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    min-width: 450px;
+    margin: 0 auto !important;
+}
+
+#big_title>p:first-child,
+#big_title>p:last-child {
+    font-size: 6em;
+}
+
+#big_title>p:first-child {
+    letter-spacing: -1px;
+}
+
+#big_title>p:nth-child(2) {
+    top: -15px;
+
+    background: transparent;
+}
+
+#big_title>p:last-child {
+    letter-spacing: -3.5px;
+    top: -30px;
+}
+
+#big_title>p>span {
+    font-weight: 800;
+    color: #B1B1B1;
+    background: inherit;
+}
+
+h2.centre {
+    font-size: 3em;
+    font-weight: 600;
+    text-align: center;
+    color: #C74F4F;
+    border-bottom: 2px solid #C74F4F;
+    padding: 0 0 20px 0;
+    margin-bottom: 30px !important;
+    margin-top: 0; 
+}
+
+#personnages,
+#perso_mort {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+    overflow: auto;
+}
+
+#personnages>li,
+#perso_mort>li {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    opacity: 0.7;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+#personnages>li:last-child,
+#perso_mort>li:last-child {
+    margin-bottom: 0;
+}
+
+#personnages>li:not(#no_perso):hover,
+#personnages>li:not(#no_perso):focus,
+#perso_mort>li:not(#no_perso):hover,
+#perso_mort>li:not(#no_perso):focus {
+    opacity: 1;
+    transition-duration: 0.2s;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+#personnages>#new {
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+#personnages>#new>span {
+    margin-bottom: 30px;
+    background-color: rgb(1, 163, 145);
+    height: 100%;
+    color: white;
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1);
+    padding: 0 10px;
+}
+
+#personnages>li>div:first-of-type>span:last-of-type,
+#perso_mort>li>div:first-of-type>span:last-of-type {
+    height: 50px;
+    background: #C74F4F url(./img/close.png) no-repeat center center;
+    color: transparent;
+    width: 41px;
+    cursor: pointer;
+}
+
+#personnages>li>div:first-of-type>span:last-of-type,
+#perso_mort>li>div:first-of-type>span:last-of-type,
+#personnages>#new>span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    right: -41px;
+    line-height: 35px;
+    font-size: 2em;
+    font-weight: 400;
+    transition-duration: 0.5s;
+}
+
+#personnages>li:not(#new)>div:first-of-type>span:last-of-type:hover,
+#perso_mort>li>div:first-of-type>span:last-of-type:hover {
+    box-shadow: -2px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+#personnages>#new:hover>span,
+#personnages>#new:focus>span,
+#personnages>li:hover>div:first-of-type>span:last-of-type,
+#personnages>li:focus>div:first-of-type>span:last-of-type,
+#perso_mort>li:hover>div:first-of-type>span:last-of-type,
+#perso_mort>li:focus>div:first-of-type>span:last-of-type {
+    right: 0;
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+#personnages>li:hover>.nom,
+#personnages>li:focus>.nom,
+#perso_mort>li:hover>.nom,
+#perso_mort>li:focus>.nom,
+#personnages>#new:hover,
+#personnages>#new:focus{
+    color: rgb(1, 163, 145);
+}
+
+#personnages .stats>div,
+#perso_mort .stats>div{
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+    top: -6px;
+}
+
+#personnages .stats>div>div,
+#perso_mort .stats>div>div{
+    text-align: right;
+    border-top: thin dotted #000;
+    font-size: 0.9em;
+    background: no-repeat 5px bottom;
+    padding: 5px 5px 0 30px;
+}
+
+#personnages .stats>div:nth-child(1)>div,
+#perso_mort .stats>div:nth-child(1)>div {
+    color: #5D94C7;
+    border-color: #5D94C7;
+    background-image: url(./img/sword.png);
+}
+
+#personnages .stats>div:nth-child(2)>div,
+#perso_mort .stats>div:nth-child(2)>div {
+    color: #C74F4F;
+    border-color: #C74F4F;
+    background-image: url(./img/heart.png);
+}
+
+#personnages .stats>div:nth-child(3)>div,
+#perso_mort .stats>div:nth-child(3)>div {
+    color: #01A391;
+    border-color: #01A391;
+    background-image: url(./img/clover.png);
+}
+
+#personnages .stats>div>span:first-of-type,
+#perso_mort .stats>div>span:first-of-type {
+    font-size: 2em;
+}
+
+#personnages>li>a,
+#perso_mort>li>a {
+    font-size: 1em;
+    border: none;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 0;
+    right: -200px;
+    background-color: #B1B1B1;
+    color: white;
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 5px;
+    transition-duration: 0.5s;
+    opacity: 0;
+}
+
+#personnages>li>a:hover,
+#personnages>li>a:focus,
+#perso_mort>li>a:hover,
+#perso_mort>li>a:focus {
+    background-color: rgb(1, 163, 145);
+}
+
+#personnages>li:hover>a,
+#personnages>li:focus>a,
+#perso_mort>li:hover>a,
+#perso_mort>li:focus>a {
+    right: 0;
+    transition-duration: 0.2s;
+    opacity: 1;
+}
+
+p.centre {
+    background: url(./img/triangular.png) repeat top left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+#new_popup {
+    background: url(./img/bg.png) repeat top left;
+    border-radius: 5px;
+    max-width: 450px;
+    min-width: 405px;
+    max-height: 90%;
+    overflow: auto;
+}
+
+#new_popup>h1 {
+    color: #01A391;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 0;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #808080;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+#new_popup>p {
+    font-size: 0.9em;
+    margin: 20px 20px 0 20px;
+    border: thin dotted;
+    padding: 10px 10px 10px 50px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.4) url(./img/info.png) no-repeat 12px 12px;
+    min-height: 36px;
+}
+
+#new_popup>form {
+    padding: 20px;
+}
+
+#new_popup>form>input[type="text"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    min-width: 90%;
+    box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+#new_popup>form>input[type="text"]:hover, #new_popup>form>input[type="text"]:focus {
+    box-shadow: 0 -2px 0px rgba(93, 148, 199, 0.5);
+    outline: none;
+    color: #01A391;
+}
+
+#new_popup>form>div>input[type="radio"] {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    visibility: hidden;
+}
+
+#new_popup>form>h2 {
+    color: rgb(199, 79, 79);
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: thin solid;
+}
+
+#new_popup>form>h2>span {
+    font-size: 0.8em;
+}
+
+#new_popup>form>.potions {
+    background: white no-repeat right top;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    opacity: 0.6;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+#new_popup>form>.potions:hover,
+#new_popup>form>.potions:focus,
+#new_popup>form>.potions.selected {
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+#new_popup>form>.potions.selected {
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+    background-image: url(./img/check.png);
+    cursor: default;
+}
+
+#new_popup>form>.potions>img, #new_popup>form>.potions>div {
+    display: inline-block;
+}
+
+#new_popup>form>.potions>div {
+    width: 75%;
+    margin-left: 20%;
+}
+
+#new_popup>form>.potions>img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+#new_popup>form>input[type="submit"] {
+    float: right;
+}
+
+#new_popup>form>input[type="reset"] {
+    opacity: 0.6;
+}
+
+#new_popup>form>input[type="submit"],
+#new_popup>form>input[type="reset"] {
+    background-color: #B1B1B1;
+    font-size: 1em;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    width: 49%;
+}
+
+#new_popup>form>input[type="reset"]:focus,
+#new_popup>form>input[type="reset"]:hover {
+    background-color: #C74F4F;
+}
+
+#new_popup>form>input[type="submit"]:focus,
+#new_popup>form>input[type="submit"]:hover {
+    background-color: #01A391;
+}
+
+#new_popup>form>input[type="submit"]:hover,
+#new_popup>form>input[type="submit"]:focus,
+#new_popup>form>input[type="reset"]:hover,
+#new_popup>form>input[type="reset"]:focus{
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+#new_popup .potions h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+    border-bottom: thin dotted rgba(136, 136, 136, 0.5);
+    padding-bottom: 5px;
+}
+
+#new_popup .potions ul {
+    padding-left: 15px;
+    list-style-type: circle;
+    margin-top: 0;
+}

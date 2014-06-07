@@ -1,0 +1,23 @@
+.notification {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    z-index: 9999;
+    padding: 25px 0;
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-size: 1.1em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    left: 5%;
+}
+
+.notif_error {
+    background-color: rgba(199, 79, 79, 0.9);
+}
+
+.notif_success {
+    background-color: rgba(1, 163, 145, 0.9);
+    
+}

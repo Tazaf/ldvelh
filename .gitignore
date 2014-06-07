@@ -38,4 +38,4 @@ nbactions.xml
 nb-configuration.xml
 
 ### Smarty ###
-/Smarty
+application/View/Smarty
