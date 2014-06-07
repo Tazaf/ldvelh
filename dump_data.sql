@@ -1,16 +1,33 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Client: 127.0.0.1
+-- Généré le: Sam 07 Juin 2014 à 21:19
+-- Version du serveur: 5.5.27
+-- Version de PHP: 5.4.7
+
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT=0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+--
+-- Base de données: `ldvelh`
+--
 
-INSERT INTO `caracteristique` VALUES
+--
+-- Contenu de la table `caracteristique`
+--
+
+INSERT INTO `caracteristique` (`nom`) VALUES
 ('chance'),
 ('chanceMax'),
 ('endurance'),
@@ -18,7 +35,11 @@ INSERT INTO `caracteristique` VALUES
 ('habilete'),
 ('habileteMax');
 
-INSERT INTO `effet` VALUES
+--
+-- Contenu de la table `effet`
+--
+
+INSERT INTO `effet` (`modificateur`, `valeur`, `caracteristique_nom`) VALUES
 ('+', 0, 'chance'),
 ('+', 1, 'chanceMax'),
 ('+', 0, 'endurance'),
@@ -27,14 +48,22 @@ INSERT INTO `effet` VALUES
 ('-', 4, 'habilete'),
 ('+', 0, 'habilete');
 
-INSERT INTO `malus` VALUES
+--
+-- Contenu de la table `malus`
+--
+
+INSERT INTO `malus` (`paragraphe_numero`, `effet_modificateur`, `effet_valeur`, `effet_caracteristique_nom`) VALUES
 (145, '-', 2, 'habilete'),
 (151, '-', 2, 'habilete'),
 (294, '-', 2, 'habilete'),
 (166, '-', 3, 'habilete'),
 (91, '-', 4, 'habilete');
 
-INSERT INTO `monstre` VALUES
+--
+-- Contenu de la table `monstre`
+--
+
+INSERT INTO `monstre` (`id`, `nom`, `habilete`, `endurance`) VALUES
 (1, 'Manticore', 11, 11),
 (2, 'Mouche géante', 7, 8),
 (3, 'Minotaure', 9, 9),
@@ -62,7 +91,11 @@ INSERT INTO `monstre` VALUES
 (25, 'Troll des cavernes', 10, 11),
 (26, 'Homme des cavernes', 7, 7);
 
-INSERT INTO `paragraphe` VALUES
+--
+-- Contenu de la table `paragraphe`
+--
+
+INSERT INTO `paragraphe` (`numero`) VALUES
 (6),
 (39),
 (40),
@@ -96,7 +129,11 @@ INSERT INTO `paragraphe` VALUES
 (380),
 (387);
 
-INSERT INTO `population` VALUES
+--
+-- Contenu de la table `population`
+--
+
+INSERT INTO `population` (`monstre_id`, `paragraphe_numero`) VALUES
 (1, 6),
 (2, 39),
 (3, 40),
@@ -138,7 +175,11 @@ INSERT INTO `population` VALUES
 (6, 380),
 (26, 387);
 
-INSERT INTO `possession` VALUES
+--
+-- Contenu de la table `possession`
+--
+
+INSERT INTO `possession` (`id`, `nom`, `type_nom`) VALUES
 (1, 'Potion d''Adresse', 'potion'),
 (2, 'Potion de Vigueur', 'potion'),
 (3, 'Potion de Bonne Fortune', 'potion'),
@@ -179,13 +220,21 @@ INSERT INTO `possession` VALUES
 (38, 'Bracelet de cuir', 'bijoux'),
 (39, 'Bouteille d''acide', 'potion');
 
-INSERT INTO `possession_effet` VALUES
+--
+-- Contenu de la table `possession_effet`
+--
+
+INSERT INTO `possession_effet` (`possession_id`, `effet_modificateur`, `effet_valeur`, `effet_caracteristique_nom`) VALUES
 (1, '+', 0, 'habilete'),
 (2, '+', 0, 'endurance'),
 (3, '+', 0, 'chance'),
 (3, '+', 1, 'chanceMax');
 
-INSERT INTO `type` VALUES
+--
+-- Contenu de la table `type`
+--
+
+INSERT INTO `type` (`nom`) VALUES
 ('bijoux'),
 ('equipement'),
 ('potion');
