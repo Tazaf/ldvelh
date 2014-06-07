@@ -1,6 +1,6 @@
 # ldvelh
 
-### English
+#### English
 
 This project is an attempt to help players of adventure gamebooks books in managing their character. Right now, only one book is supported : Deathtrap Dungeon by Ian Livingstone.
 It was created as a school project for a PHP course. Because of the limited time available and the then incomplete knowledge of PHP and the MVC pattern, it's quite limited as for now and can not be easily expand in supporting other books, let alone other game rules. Therefore, the purpose of the course was to develop an application from scratch without any framework or plug-ins.
