@@ -1,0 +1,176 @@
+h3 {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
+    background: url(./img/triangular.png) repeat left top;
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.centre>div {
+    background-color: white;
+    transition-duration: 0.5s;
+    padding: 10px;
+    opacity: 0.7;
+    font-size: 1.2em;
+    text-align: right;
+    vertical-align: bottom;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.centre>div:last-of-type {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+}
+
+.centre>div:not(.disabled):hover,
+.centre>div:not(.disabled):focus {
+    opacity: 1;
+    transition-duration: 0.2s;
+}
+
+.centre>div:nth-of-type(1)>span:first-of-type {
+    color: #5D94C7;
+    background: transparent url(./img/sword.png) no-repeat left center;
+    padding-left: 30px;
+}
+
+.centre>div:nth-of-type(2)>span:first-of-type {
+    color: #C74F4F;
+    background: transparent url(./img/heart.png) no-repeat left center;
+    padding-left: 30px;
+}
+
+.centre>div:nth-of-type(3)>span:first-of-type {
+    color: #01A391;
+    background: transparent url(./img/clover.png) no-repeat left center;
+    padding-left: 30px;
+}
+
+.centre>div:nth-of-type(4)>span:first-of-type {
+    color: #CF9640;
+    background: transparent url(./img/bread.png) no-repeat left center;
+    padding-left: 30px;
+}
+
+.centre>div:nth-of-type(5)>span:first-of-type {
+    color: #FFB800;
+    background: transparent url(./img/coin.png) no-repeat left center;
+    padding-left: 30px;
+}
+
+.centre>div>span:first-of-type {
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    bottom: 35%;
+}
+.centre>div>span.actuel {
+    font-size: 2em;
+    width: 50px;
+    display: inline-block;
+}
+
+.centre>div>span.max {
+    width: 40px;
+    text-align: left;
+    display: inline-block;
+}
+
+.centre>div:nth-of-type(2)>span.mort {
+    width: 95px;
+}
+
+.centre>div>span.max:before {
+    content: "/";
+}
+
+.centre>div>button {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.6;
+    color: white;
+    width: 50px;
+    position: relative;
+    top: -5px;
+}
+
+.centre>div>button:first-of-type {
+    margin-right: 20px;
+    background-color: #C74F4F;
+}
+
+.centre>div>button:last-of-type {
+    margin-left: 20px;
+    background-color: #01A391;
+}
+
+.centre>div>button:not([disabled]):hover,
+.centre>div>button:not([disabled]):focus {
+    opacity: 1;
+    transition-duration: 0.2s;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.centre>div>input[type="text"] {
+    padding: 3px 10px;
+    border: thin dotted #888;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin: 0;
+    font-size: 1.5em;
+    outline: none;
+    width: 200px;
+    text-align: right;
+}
+
+.centre>button.status_action {
+    background-color: #B1B1B1;
+    font-size: 1em;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    margin-bottom: 20px;
+    opacity: 0.3;
+    width: 49%;
+}
+
+.centre>button.status_action:last-of-type {
+    float: right;
+}
+
+.centre>button:not([disabled]).status_action:last-of-type {
+    opacity: 1;
+}
+
+.centre>button:not([disabled]).status_action:first-of-type {
+    opacity: 0.6;
+}
+
+.centre>button:not([disabled]).status_action:last-of-type:hover,
+.centre>button:not([disabled]).status_action:last-of-type:focus {
+    background-color: #01A391;
+}
+
+.centre>button:not([disabled]).status_action:first-of-type:hover,
+.centre>button:not([disabled]).status_action:first-of-type:focus {
+    background-color: #C74F4F;
+}
+
+.centre>button:not([disabled]).status_action:hover,
+.centre>button:not([disabled]).status_action:focus {
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition-duration: 0.2s;
+}

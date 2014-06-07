@@ -1,0 +1,38 @@
+#fade { /*--Masque opaque noir de fond--*/
+    display: none; /*--masqué par défaut--*/
+    background: #000;
+    position: fixed; left: 0; top: 0;
+    width: 100%; height: 100%;
+    opacity: 0.5;
+    z-index: 150;
+}
+.popup_block{
+    display: none; /*--masqué par défaut--*/
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 200;
+}
+
+/*--Gérer la position fixed pour IE6--*/
+*html #fade {
+    position: absolute;
+}
+*html .popup_block {
+    position: absolute;
+}
+#message {
+    width: 500px;
+    background-color: #fff;
+    border: 7px solid #6a8eff;
+    padding: 15px;
+    text-align: center;
+}
+#message .close {
+    display: inline;
+    color: #6a8eff;
+    text-decoration: none;
+    float: none;
+}
+#message .close:hover {
+    text-decoration: underline;
+}
