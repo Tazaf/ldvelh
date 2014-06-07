@@ -39,3 +39,5 @@ Some rules are not supported, either due a to lack of time or a lack of knowledg
 * Fight types : depending on the situation, when the player encounter several monsters in the same location, he's instructed by the book to fight them either one after another or all in the same time. Right now, every fight is a one-vs-one type.
 * Victory conditions : in the book, it's possible to end a fight without actually killing the monster or being killed. Using one special item if it is in your backpack, a special dice result, a special number of failed or successfull assault, etc. Right now, you can't finish a fight without killing the monster or being killed.
 * Items effets : items like weapons or shield can have an effect on the player attributes. The rules in the book being vague about how these effets work, they are not implemented as for now.
+
+There is no authentication whatsoever. This means that every user can create, delete or use any existing character.
