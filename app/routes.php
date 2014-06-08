@@ -18,3 +18,15 @@ Route::get('/', function() {
 Route::get('test', function() {
     return 'test';
 });
+
+Route::get('1', function() {
+    return Type::with('possessions')->get();
+});
+
+Route::get('2', function() {
+    return Possession::with('effets')->get();
+});
+
+Route::get('3', function() {
+    return Effet::all();
+});
