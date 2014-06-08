@@ -28,5 +28,9 @@ Route::get('2', function() {
 });
 
 Route::get('3', function() {
-    return Effet::all();
+    return Effet::with('caracteristique')->get();
+});
+
+Route::get('4', function() {
+    return Personnage::with('possessions.effets.caracteristique', 'possessions.type')->get();
 });

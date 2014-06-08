@@ -3,8 +3,8 @@
 class Effet extends Eloquent {
 
     protected $table = 'effets';
-    protected $appends = array('caracteristique');
-    protected $hidden = array('caracteristique_id');
+    //protected $appends = array('caracteristique');
+    //protected $hidden = array('caracteristique_id', 'pivot');
     public $timestamps = false;
 
     public function caracteristique() {
