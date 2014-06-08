@@ -40,5 +40,5 @@ nb-configuration.xml
 ### Smarty ###
 application/View/Smarty
 app/storage/logs/laravel.log
-app/storage/sessions/c038e2ebb2c32bca975a0bf6c836488da577d4aa
+app/storage/sessions
 app/storage/meta/services.json
