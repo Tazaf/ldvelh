@@ -34,3 +34,7 @@ Route::get('3', function() {
 Route::get('4', function() {
     return Personnage::with('possessions.effets.caracteristique', 'possessions.type')->get();
 });
+
+Route::get('5', function() {
+    return Possession::with('type', 'effets.caracteristique', 'personnages')->get();
+});

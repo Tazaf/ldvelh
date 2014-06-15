@@ -15,6 +15,10 @@ class Possession extends Eloquent {
         return $this->belongsToMany('Effet');
     }
     
+    public function personnages() {
+        return $this->belongsToMany('Personnage', 'sac_a_dos');
+    }
+    
     public function getTypeAttribute() {
         return $this->type()->getResults()->nom;
     }
