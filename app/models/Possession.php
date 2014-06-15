@@ -3,8 +3,8 @@
 class Possession extends Eloquent {
 
     protected $table = 'possessions';
-    protected $appends = array('type');
-    protected $hidden = array('type_id');
+    protected $appends = ['type'];
+    protected $hidden = ['type_id'];
     public $timestamps = false;
 
     public function type() {
